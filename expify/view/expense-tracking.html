@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -41,6 +41,60 @@
         </table>
     </div>
     <script src="../scipts/expense-traking.js"></script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="../styles/expense-tracking.css">
+    <!-- Include Chart.js -->
+</head>
+
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <form id="expense-form">
+            <input type="text" id="expense-name" placeholder="Expense Name" required>
+            <input type="number" id="expense-amount" placeholder="Amount" min="1" required>
+            <input type="date" id="expense-date" required>
+            <button type="submit">Add Expense</button>
+        </form>
+        <div class="filters">
+            <label for="filter">Filter:</label>
+            <select id="filter">
+                <option value="daily">Daily</option>
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+            </select>
+        </div>
+        <div id="summary">
+            <h3>Summary</h3>
+            <p>Total Expenses: <span id="total-expenses">0</span></p>
+        </div>
+        <table id="expense-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <!-- Canvas for the graph -->
+        <div class="graph-container">
+            <h3>Expenses Graph</h3>
+            <canvas id="expense-chart"></canvas>
+        </div>
+    </div>
+    <script src="../scipts/expense-traking.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,10 @@
-// Attach click event to the button
-document.getElementById('start-tracking-btn').addEventListener('click', () => {
-    // Redirect to expense-tracking.html
-    window.location.href = 'expense-tracking.html';
+const buttons = document.querySelectorAll("[data-target]");
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const targetPage = button.getAttribute("data-target");
+    console.log(targetPage);
+    if (targetPage) {
+      window.location.href = targetPage;
+    }
+  });
 });

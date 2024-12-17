@@ -22,6 +22,25 @@
     width: 4%;
 }
 
+.header div .menu-items {
+    background: transparent;
+    border: none;
+    color: #f5f5dc;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: titlecase;
+}
+
+.header div .menu-items .active {
+    background: #f5f5dc;
+    color: #614827;
+
+}
+
+.header div .menu-items:hover {
+    cursor: pointer;
+}
+
 .header-container {
     background: #f5f5dc;
     height: 100vh;

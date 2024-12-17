@@ -65,3 +65,52 @@ td {
 #summary {
     margin-bottom: 20px;
 }
+
+.graph-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  canvas {
+    display: block;
+    width: 100%;
+    height: 300px;
+  }
+  
+
+.header {
+    height: auto;
+    -webkit-box-shadow: 1px -5px 5px 9px #9C9C9C;
+    box-shadow: 1px -5px 5px 9px #9C9C9C;
+    padding: 5px;
+    background-color: #614827;
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header div img {
+    width: 4%;
+}
+
+.header div .menu-items {
+    background: transparent;
+    border: none;
+    color: #f5f5dc;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: titlecase;
+}
+
+.header div .menu-items .active {
+    background: #f5f5dc;
+    color: #614827;
+
+}
+
+.header div .menu-items:hover {
+    cursor: pointer;
+}

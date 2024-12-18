@@ -17,37 +17,163 @@
             <img src="../assets/logo.png" alt="">
             <button class="menu-items" id="homeBtn" data-target="homepage.html">Home</button>
             <button class="menu-items" id="financeBtn" data-target="financial-lessons.html">Financial Lessons</button>
-            <button class="menu-items" id="aboutBtn" data-target="about.html">About Us</button>
-            <button>Logout</button>
+            <!-- <button class="menu-items" id="aboutBtn" data-target="about.html">About Us</button> -->
+            <button id="logoutBtn" data-target="login.html">Logout</button>
+
         </div>
     </header>
     <div class="header-container">
-        <div class="row1">
-            <span>
-                <img src="../assets/save-money.webp" alt="">
-                <p>
-                    Saving money is the foundation of financial stability and independence. It involves setting aside a
-                    portion of your income for future needs, emergencies, or planned expenses.
-                </p>
-                <button>Start Saving</button>
-            </span>
-            <span>
-                <img src="../assets/save-money.webp" alt="">
-                <p>
-                    Investing is a powerful way to grow wealth over time and achieve financial goals. It involves
-                    putting money into assets like stocks, bonds, mutual funds, or real estate, aiming for higher
-                    returns than savings accounts.
-                </p>
-                <button>Start Investing</button>
-            </span>
-            <span>
-                <img src="../assets/save-money.webp" alt="">
-                <p>
-                    Tracking money ensures you stay on top of your finances and meet your financial goals. It involves
-                    monitoring your income, expenses, and investments to make informed decisions.
-                </p>
-                <button id="start-tracking-btn">Start Tracking</button>
-            </span>
+        <button class="accordion">Personal Finance Math - Part 1</button>
+        <div class="panel">
+            <p><b>Simple Interest</b></p>
+            <p>Imagine that one of your friends needs money urgently and he approaches you for it. Being a friend, you
+                agree to help him with the money but being a capitalist at heart, you also expect your friend to pay you
+                ‘interest’ on the cash you lend to him. I know we don’t usually ask a friend to pay us interest, but
+                let’s just assume he is a friend whom you’d like to help, but not at the opportunity cost of your money.
+            </p><br>
+            <p>The transaction details are below –</p>
+            <ul>
+                <li>Amount – Rs.100,000/-</li>
+                <li>Tenure – 5 years</li>
+                <li>Interest (%) – 10</li>
+            </ul><br>
+            <p>As you can see, your friend agrees to repay Rs.100,000/- over a 5 year period and also agrees to pay you
+                an interest of 10%.
+                <br>
+                Given this, how much money will you make at the end of 5 years? Let’s do the math and find out the
+                details.
+                <br>
+                Remember, the yearly interest is paid on the principal amount.
+                <br>
+                Principal = Rs.100,000/-
+                <br>
+                Interest = 10%
+                <br>
+                Yearly interest amount = 10% * 100,000
+                = Rs.10,000/-
+            </p>
+        </div>
+
+        <button class="accordion">Personal Finance Math - Part 2</button>
+        <div class="panel">
+            <p><b>Compound interest</b></p>
+            <p>Compound interest works differently compared to simple interest. If someone agrees to pay you compound
+                interest, then it essentially means that the person or the entity is agreeing to pay you interest on the
+                interest already earned.
+            </p><br>
+            <p>Let’s figure this out with the same example discussed above. The transaction details are as follows –</p>
+            <ul>
+                <li>Amount – Rs.100,000/-</li>
+                <li>Tenure – 5 years</li>
+                <li>Interest (%) – 10</li>
+                <li>Interest type – Compound Interest (compounded annually)</li>
+            </ul><br>
+            <p>The math is as follows –</p><br>
+            <p><b>Year 1</b></p><br>
+            <p>At the end of 1st year, you are entitled to receive a 10% interest on the principal outstanding and
+                previous interest (if any). For a moment assume you are closing this at the end of the 1st years, then
+                you would receive the principal amount plus the interest applicable on the principal amount.
+                <br>
+                Amount = Principal + (Principal * Interest), this can be simplified to
+                <br>
+                = Principal * (1+ interest)
+                <br>
+                Here, (1+interest) is the ‘interest’ part and the principal is obviously the principal. Applying this –
+                <br>
+                = 100,000 *(1+10%)
+                <br>
+                = 110,000
+                <br>
+            <p><b> Year 2</b></p>
+            Now assume, you want to close this in the 2nd year instead of the first, here is how much you’d get back
+            –
+            <br>
+            Remember, you are supposed to get paid interest on the interest earned in the first year, hence –
+            <br>
+            Principal *(1+ Interest) * (1+Interest)
+            <br>
+            The green bit is the amount receivable at the end of 1st year, and the blue bit is the interest
+            applicable for the 2nd year.
+            <br>
+            We can simplify the above equation –
+            <br>
+            = Principal *(1+ Interest)^(2)
+            <br>
+            = 100,000*(1+10%)^(2)
+            <br>
+            = 121,000
+            <br>
+            <p><b>Year 3</b></p>
+            <br>
+            In the 3rd year, you’d get interest on the 1st two year’s interest as well. The math –
+            <br>
+            Principal *(1+ interest) *(1+interest) *(1+interest)
+            <br>
+            The green bit is the amount receivable at the end of 2 years, and the blue bit is the interest
+            applicable for the 3rd year.
+            <br>
+            We can simplify the above equation –
+            <br>
+            = Principal *(1+ Interest)^(3)
+            <br>
+            = 100,000*(1+10%)^(3)
+            <br>
+            = 133,100
+            <br>
+            We can generalize this –
+            <br>
+            P*(1+R)^(n), where –
+            <br>
+            P = Principal
+            R = Interest rate
+            N = Tenure
+            So, if you were to have this open for the entire 5 years, you’d receive –
+            <br>
+            = 100,000*(1+10%)^(5)
+            <br>
+            =Rs.161,051/-
+            <br>
+            Contrast the difference between the 50K received in simple interest versus the Rs.61,051/- received via
+            compound interest.
+            <br>
+            Compound interest and compounded return work magic in finance. At the end of the day, every aspect of
+            personal finance boils down to the compounded return. For this reason, I think it is best to spend some
+            more time trying to understand the concept of compounding of money.
+            </p>
+        </div>
+        <button class="accordion">Personal Finance Math - Part 3</button>
+        <div class="panel">
+            <p><b>The compounding effect</b></p>
+            <p>Apparently, Albert Einstein once described ‘compound interest’ as the 8th wonder of the world. I guess he
+                could not describe it any better. To understand why you need to understand the compound interest in
+                conjunction with time.
+                <br> <br>
+                Compounding in the finance world refers to the ability of money to grow, given that the gains of year 1
+                get reinvested for year 2, gains of year 2 gets reinvested for year 3, so on and so forth.
+                <br> <br>
+                For example, consider you invest Rs.100 which is expected to grow at 20% year on year (recall this is
+                also called the CAGR or simply the growth rate). At the end of the first year, the money grows to
+                Rs.120.
+                <br> <br>
+                At the end of year 1, you have two options –
+                <br> <br>
+                Let Rs.20 in profits remain invested along with the original principal of Rs.100 or
+                Withdraw the profits of Rs.20
+                You decide not to withdraw Rs.20 profit; instead, you decide to reinvest the money for the 2nd year. At
+                the end of the 2nd year, Rs.120 grows at 20% to Rs.144. At the end of 3rd year, Rs.144 grows at 20% to
+                Rs.173. So on and so forth.
+                <br> <br>
+                Compare this with withdrawing Rs.20 profits every year. Had you opted to withdraw Rs.20 every year then
+                at the end of the 3rd year the profits collected would be Rs. 60.
+                <br> <br>
+                However, since you decided to stay invested, the profits at the end of 3 years are Rs.173/-. This is
+                good Rs.13 or 21.7% over Rs.60 earnt because you opted to do nothing and decided to stay invested.
+                <br> <br>
+                This is called the compounding effect.
+            </p><br>
+            <p>
+                <img src="https://zerodha.com/varsity/wp-content/uploads/2019/07/Compounding-Effect-image.jpg" alt="">
+            </p>
         </div>
     </div>
     <script src="../scipts/homepage.js"></script>
